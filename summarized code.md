@@ -148,4 +148,75 @@ plt.show()
 
 ```
 
+<h2> Omitting outliers</h2>
+
+<br> Use sns.catplot() to create a box plot with the student_data DataFrame, putting "internet" on the x-axis and "G3" on the y-axis.
+<br> Add subgroups so each box plot is colored based on "location".
+<br> Do not display the outliers.
+
+
+```
+# Create a box plot with subgroups and omit the outliers
+
+sns.catplot(x="internet",y="G3",hue="location",data=student_data,kind = 'box',sym="")
+
+
+
+
+# Show plot
+plt.show()
+
+```
+
+
+<h2> Adjusting the whiskers </h2>
+
+Adjust the code to make the box plot whiskers to extend to 0.5 * IQR. Recall: the IQR is the interquartile range.
+
+```
+
+#Set the whiskers to 0.5 * IQR
+sns.catplot(x="romantic", y="G3",
+            data=student_data,
+            kind="box")
+
+# Show plot
+plt.show()
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
