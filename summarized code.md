@@ -216,6 +216,52 @@ plt.show()
 
 ```
 
+<h2> Customizing point plots </h2>
+
+Use sns.catplot() and the student_data DataFrame to create a point plot with "famrel" on the x-axis and number of absences ("absences") on the y-axis.
+
+
+```
+# Create a point plot of family relationship vs. absences
+sns.catplot(x="famrel",y="absences",data = student_data,kind="point")
+
+
+            
+# Show plot
+plt.show()
+
+```
+
+Add "caps" to the end of the confidence intervals with size 0.2.
+
+```
+# Remove the lines joining the points
+sns.catplot(x="famrel", y="absences",
+			data=student_data,
+            kind="point",
+            capsize=0.2)
+            
+# Show plot
+plt.show()
+
+```
+Remove the lines joining the points in each category.
+
+```
+
+# Remove the lines joining the points
+sns.catplot(x="famrel", y="absences",
+			data=student_data,
+            kind="point",
+            capsize=0.2,join=False)
+            
+# Show plot
+plt.show()
+
+```
+
+
+
 
 
 
